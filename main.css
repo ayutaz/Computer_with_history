@@ -1,0 +1,17 @@
+h1{
+    text-align: center;
+}
+h5{
+    text-align: center;
+    /* display: inline-block; */
+}
+.title{
+    margin-bottom: 10px;
+}
+.message{
+    text-align: center !important;
+}
+p{
+    text-align: center;
+    margin-top: 10px;
+}

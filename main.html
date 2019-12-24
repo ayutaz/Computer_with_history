@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <title>calculator</title>
+</head>
+<body>
+    <div class="ui manin continer">
+        <div id="app">
+            <div class="titile">
+                <h1>電卓アプリ version</h1>
+                <h5>現在日時 : {{now}}</h5>
+            </div>
+            <div class="top">
+                <div class="ui input">
+                    <input type="text" v-model="ans">
+                </div>
+                <button class="ui button" v-on:click="calc('C')">C</button>
+            </div>
+            <div class="button">
+                <table class="ui celled table">
+                    <tbody>
+                        <tr v-for="row in items">
+                            <td v-for="item in row">
+                                <button class="ui button" v-on:click="calc(item)">{{item}}</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="history">
+                <p>ここに，計算の履歴が表示されます</p>
+                <div class="ui celled list">
+                    <div class="content" v-for="history in historys">
+                            <div class="item">
+                                <i class="number icon"></i>
+                                {{history}}
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </divn>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./main.js"></script>
+    <!-- semantic.css  -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css">
+</body>
+</html>
