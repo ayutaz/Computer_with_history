@@ -11,7 +11,7 @@
     <div class="ui manin continer">
         <div id="app">
             <div class="titile">
-                <h1>電卓アプリ version</h1>
+                <h1>電卓アプリ</h1>
                 <h5>現在日時 : {{now}}</h5>
             </div>
             <div class="top">
@@ -31,17 +31,19 @@
                     </tbody>
                 </table>
             </div>
-            <div class="history">
+            <!-- <div class="history">
                 <p>ここに，計算の履歴が表示されます</p>
                 <div class="ui celled list">
-                    <div class="content" v-for="history in historys">
-                            <div class="item">
-                                <i class="number icon"></i>
-                                {{history}}
-                            </div>
-                    </div>
+                    <table class="ui celled table">
+                        <thead>
+                            <tr>
+                                <td>履歴</td>
+                                <td>計算時刻</td>
+                            </tr>
+                        </thead>
+                    </table>
                 </div>
-            </div>
+            </div> -->
         </divn>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
