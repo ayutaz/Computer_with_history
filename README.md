@@ -1,0 +1,2 @@
+# Computer_with_history
+過去の計算の履歴が見れる計算機
