@@ -14,18 +14,29 @@
                 <h1>電卓アプリ</h1>
                 <h5>現在日時 : {{now}}</h5>
             </div>
-            <div class="top">
-                <div class="ui input">
-                    <input type="text" v-model="ans">
+            <div class="ui two column centered grid top">
+                <div class="column">
+                    <div class="ui form">
+                        <div class="two fields">
+                            <div class="field">
+                                <label>入力された式</label>
+                                <input readonly="" type="text" v-model="formula">
+                            </div>
+                            <div class="field">
+                                <label>答え</label>
+                                <input readonly="" type="text" v-model="ans">
+                            </div>
+                            <button class="ui button" v-on:click="calc('C')">C</button>
+                        </div>
+                    </div>
                 </div>
-                <button class="ui button" v-on:click="calc('C')">C</button>
             </div>
-            <div class="button">
-                <table class="ui celled table">
+            <div class="ui two column centered grid">
+                <table class="ui celled table column">
                     <tbody>
                         <tr v-for="row in items">
                             <td v-for="item in row">
-                                <button class="ui button" v-on:click="calc(item)">{{item}}</button>
+                                <button class="ui huge button" v-on:click="calc(item)">{{item}}</button>
                             </td>
                         </tr>
                     </tbody>

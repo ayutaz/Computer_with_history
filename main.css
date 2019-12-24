@@ -3,13 +3,9 @@ h1{
 }
 h5{
     text-align: center;
-    /* display: inline-block; */
 }
 .title{
-    margin-bottom: 10px;
-}
-.message{
-    text-align: center !important;
+    margin-bottom: 10px !important;
 }
 p{
     text-align: center;
