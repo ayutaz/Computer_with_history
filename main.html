@@ -36,25 +36,13 @@
                     <tbody>
                         <tr v-for="row in items">
                             <td v-for="item in row">
-                                <button class="ui huge button" v-on:click="calc(item)">{{item}}</button>
+                                <div v-if="item === ''" class="empty"></div>
+                                <button v-else class="ui huge button" v-on:click="calc(item)">{{item}}</button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <!-- <div class="history">
-                <p>ここに，計算の履歴が表示されます</p>
-                <div class="ui celled list">
-                    <table class="ui celled table">
-                        <thead>
-                            <tr>
-                                <td>履歴</td>
-                                <td>計算時刻</td>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
-            </div> -->
         </divn>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
