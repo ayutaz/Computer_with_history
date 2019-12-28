@@ -18,14 +18,19 @@ var app = new Vue({
     },
     methods: {
         calc: function (cmd) {
-            console.log(cmd);
             if (cmd === '=') {
                 this.ans = eval(this.formula);
-            } else if (cmd === '0') {
-                this.ans = cmd;
-            } else if (cmd === 'C'){
+            } else if (cmd === 'C') {
                 this.ans = 0;
                 this.formula = 0;
+            } else if (cmd === '√') {
+                this.ans = Math.sqrt(eval(this.formula));
+            } else if (cmd === 'x^2'){
+                this.ans = Math.pow(this.formula, 2);
+            } else if (cmd === 'log') {
+                this.ans = Math.log(eval(this.formula));
+            } else if (cmd === 'sin') {
+                this.ans = Math.sin(eval(this.formula));
             }else {
                 this.formula += cmd;
             }
