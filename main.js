@@ -22,21 +22,34 @@ var app = new Vue({
             if (cmd === '=') {
                 this.ans = eval(this.formula);
                 this.cal_historys.push(new Array(this.formula + "=" + this.ans, new Date()));
+                this.cal_historys.reverse();
             } else if (cmd === 'C') {
                 this.ans = 0;
                 this.formula = 0;
             } else if (cmd === '√') {
                 this.ans = Math.sqrt(eval(this.formula));
-                this.push_history("√" + this.formula + "=" + this.ans, new Date());
+                this.cal_historys.push(
+                  new Array("√" + this.formula + "=" + this.ans, new Date())
+                );
+                this.cal_historys.reverse();
             } else if (cmd === 'x^2') {
                 this.ans = Math.pow(this.formula, 2);
-                this.push_history(this.formula  + "^2 "+ "=" + this.ans, new Date());
+                this.cal_historys.push(
+                  new Array(this.formula + "^2" + "=" + this.ans, new Date())
+                );
+                this.cal_historys.reverse();
             } else if (cmd === 'log') {
                 this.ans = Math.log(eval(this.formula));
-                this.push_history("log"+this.formula + "=" + this.ans, new Date());
+                this.cal_historys.push(
+                  new Array("log" + this.formula + "=" + this.ans, new Date())
+                );
+                this.cal_historys.reverse();
             } else if (cmd === 'sin') {
                 this.ans = Math.sin(eval(this.formula) / 180 * Math.PI);
-                this.push_history("sin(" + this.formula +")"+ "=" + this.ans, new Date());
+                this.cal_historys.push(
+                  new Array("sin(" + this.formula +")" + "=" + this.ans, new Date())
+                );
+                this.cal_historys.reverse();
             } else {
                 this.formula += cmd;
             }
