@@ -24,8 +24,8 @@ var app = new Vue({
                 this.cal_historys.push(new Array(this.formula + "=" + this.ans, new Date()));
                 this.cal_historys.reverse();
             } else if (cmd === 'C') {
-                this.ans = 0;
-                this.formula = 0;
+                this.ans = '';
+                this.formula = '';
             } else if (cmd === 'Del') {
                 this.formula = this.formula.slice(0, -1);
             } else if (cmd === '√') {
