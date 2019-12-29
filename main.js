@@ -26,6 +26,8 @@ var app = new Vue({
             } else if (cmd === 'C') {
                 this.ans = 0;
                 this.formula = 0;
+            } else if (cmd === 'Del') {
+                this.formula = this.formula.slice(0, -1);
             } else if (cmd === '√') {
                 this.ans = Math.sqrt(eval(this.formula));
                 this.cal_historys.push(
