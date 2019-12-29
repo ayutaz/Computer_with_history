@@ -12,7 +12,7 @@
         <div id="app">
             <div class="titile">
                 <h1>電卓アプリ</h1>
-                <h5>現在日時 : {{now}}</h5>
+                <h5>現在日時:{{now}}</h5>
             </div>
             <div class="ui two column centered grid top">
                 <div class="column">
@@ -27,6 +27,7 @@
                                 <input readonly="" type="text" v-model="ans">
                             </div>
                             <button class="ui button" v-on:click="calc('C')">C</button>
+                            <!-- <button class="ui button" v-on:click="calc(Del)">Del</button> -->
                         </div>
                     </div>
                 </div>
@@ -34,7 +35,7 @@
             <div class="ui two column centered grid">
                 <table class="ui celled table column">
                     <tbody>
-                        <tr v-for="row in items">
+                        <tr v-for="row in buttons">
                             <td v-for="item in row">
                                 <div v-if="item === ''" class="empty"></div>
                                 <button v-else class="ui huge button" v-on:click="calc(item)">{{item}}</button>
@@ -43,6 +44,20 @@
                     </tbody>
                 </table>
             </div>
+            <table class="ui table">
+                <thead>
+                    <tr>
+                        <th>履歴</th>
+                        <th>時刻</th>
+                    </tr>
+                </thead>
+                <tbody v-for="item in cal_historys">
+                    <tr>
+                        <td>{{item[0]}}</td>
+                        <td>{{item[1]}}</td>
+                    </tr>
+                </tbody>
+            </table>
         </divn>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
