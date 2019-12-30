@@ -35,8 +35,8 @@
             <div class="ui two column centered grid">
                 <table class="ui celled table column">
                     <tbody>
-                        <tr v-for="row in buttons">
-                            <td v-for="item in row">
+                        <tr v-for="row in buttons" :key="row.id">
+                            <td v-for="item in row" :key="item.id">
                                 <div v-if="item === ''" class="empty"></div>
                                 <button v-else class="ui huge button" v-on:click="calc(item)">{{item}}</button>
                             </td>
@@ -52,7 +52,7 @@
                         <th>再利用</th>
                     </tr>
                 </thead>
-                <tbody v-for="item in cal_historys">
+                <tbody v-for="item in cal_historys" :key="item.id">
                     <tr>
                         <td>{{item[0]}}</td>
                         <td>{{item[1]}}</td>
