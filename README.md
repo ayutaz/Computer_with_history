@@ -1,5 +1,5 @@
 # 簡単な電卓を作る．
-![履歴付き電卓](https://ayutaz.github.io/Computer_with_history/main.html)
+[履歴付き電卓](https://ayutaz.github.io/Computer_with_history/main.html)
 で，確認できます
 ## 各ライブラリのバージョン
 <li>semantic ui 2.3.3
