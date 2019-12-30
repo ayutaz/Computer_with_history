@@ -66,6 +66,6 @@ var app = new Vue({
             number = string.indexOf('=');
             this.formula = string.slice(0, number);
             this.ans = '';
-        }
+        },
     }
 });
