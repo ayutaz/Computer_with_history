@@ -12,6 +12,12 @@ var app = new Vue({
             [0, '00', '+', '=', '', 'sin']
         ],
     },
+    created() {
+        
+    },
+    mounted() {
+        
+    },
     computed: {
         response: function () {
             return this.ans ? eval(this.formula) : "";
@@ -55,6 +61,11 @@ var app = new Vue({
             } else {
                 this.formula += cmd;
             }
+        },
+        reuse: function (string) {
+            number = string.indexOf('=');
+            this.formula = string.slice(0, number);
+            this.ans = '';
         }
     }
 });
