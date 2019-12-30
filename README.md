@@ -1,5 +1,6 @@
 # 簡単な電卓を作る．
-
+https://ayutaz.github.io/Computer_with_history/main.html
+で，確認できます
 ## 各ライブラリのバージョン
 <li>semantic ui 2.3.3
 <li>Vue.js 2.6.11
